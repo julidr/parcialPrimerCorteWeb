@@ -1,124 +1,139 @@
-<!doctype html>
-<html class="no-js" lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Products</title>
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/style.css">
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!--My own style-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+	<title>Web Products</title>
+
+</head>
+<body>
+	<div class="header">
+		<nav>
+		    <div class="nav-wrapper amber accent-2">
+		      <a href="#!" class="brand-logo" id="logo">Web Products</a>
+		      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		      <ul class="right hide-on-med-and-down">
+		        <li><a href="sass.html"><i class="material-icons left">shopping_cart</i>Shopping Cart</a></li>
+		      </ul>
+		      <ul class="side-nav" id="mobile-demo">
+		        <li><a href="sass.html">Sass</a></li>
+		        <li><a href="badges.html">Components</a></li>
+		        <li><a href="collapsible.html">Javascript</a></li>
+		        <li><a href="mobile.html">Mobile</a></li>
+		      </ul>
+		    </div>
+	    </nav>
+	</div>
+
+	<div class="category-menu">
+		<div class="row">
+			<div class="col s3">
+		        <!-- Promo Content 1 goes here -->
+		        <img src="images/dipperColor.png" class="category-image">
+	        </div>
+	      	<div class="col s3">
+		        <!-- Promo Content 2 goes here -->
+		        <img src="images/dipperColor.png" class="category-image">
+	      	</div>
+	      	<div class="col s3">
+		        <!-- Promo Content 3 goes here -->
+		        <img src="images/dipperColor.png" class="category-image">
+	      	</div>
+	      	<div class="col s3">
+		        <!-- Promo Content 3 goes here -->
+		        <img src="images/dipperColor.png" class="category-image">
+	      	</div>
+			
+		</div>
+	</div>
+
+	<div class="products-section">
+		<div class="row">
+	      <div class="col s2" id="left-section">
+	      	  <div class="divider"></div>
+				  <div class="section">
+				    <h6>Prices</h6>
+				    <form action="#">
+					    <p>
+					      <input type="checkbox" id="big30" />
+					      <label for="big30">&gt; $30.000</label>
+					    </p>
+					    <p>
+					      <input type="checkbox" id="less10" />
+					      <label for="less10">&lt; $10.000</label>
+					    </p>
+					</form>
+				  </div>
+				  <div class="divider"></div>
+				  <div class="section">
+				    <h6>Availability</h6>
+					    <form action="#">
+						    <p>
+						      <input type="checkbox" id="available" />
+						      <label for="available">Available</label>
+						    </p>
+						    <p>
+						      <input type="checkbox" id="not-available" />
+						      <label for="not-available">No Available</label>
+						    </p>
+						     <p>
+						      <input type="checkbox" id="BestSell" />
+						      <label for="BestSell">Best Sellers</label>
+						    </p>
+						</form>
+				  </div>
+				  <div class="divider"></div>
+				  <div class="section">
+				    <h6>Categories</h6>
+					    <form action="#">
+						    <p>
+						      <input type="checkbox" id="food" />
+						      <label for="food">Food</label>
+						    </p>
+						    <p>
+						      <input type="checkbox" id="drinks" />
+						      <label for="drinks">Drinks</label>
+						    </p>
+						     <p>
+						      <input type="checkbox" id="lunch" />
+						      <label for="lunch">Lunch</label>
+						    </p>
+						    <p>
+						      <input type="checkbox" id="sea" />
+						      <label for="sea">Sea</label>
+						    </p>
+						</form>
+			  </div>
+	      </div>
+	      <div class="col s10" id="right-section">
+			  <nav>
+			    <div class="nav-wrapper amber accent-1">
+			      <form>
+			        <div class="input-field">
+			          <input id="search" type="search" required>
+			          <label class="label-icon" for="search"><i class="small material-icons">search</i></label>
+			          <i class="material-icons">close</i>
+			        </div>
+			      </form>
+			    </div>
+			  </nav>
+	      </div>
+    	</div>
+		
+	</div>
+
+	<!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="js/jsonReader.js"></script>
-  </head>
-
-  <body>
-	  <div id="header">
-		<div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-		  <button class="menu-icon" type="button" data-toggle="example-menu"></button>
-		  <div class="title-bar-title">Menu</div>
-		</div>
-
-		<div class="top-bar" id="example-menu">
-		  <div class="top-bar-left">
-		    <ul class="dropdown menu" data-dropdown-menu>
-		      <li class="menu-text"><a href="index.html"> Web Products</a></li>
-		      <li>
-		        <a href="#">Categories</a>
-		        <ul class="menu vertical">
-		          <li><a href="#">Drinks</a></li>
-		          <li><a href="#">Lunch</a></li>
-		          <li><a href="#">Food</a></li>
-		          <li><a href="#">Sea</a></li>
-		        </ul>
-		      </li>
-		      <li><a href="#">About Us</a></li>
-		      <li><a href="#">Contact</a></li>
-		    </ul>
-		  </div>
-		  <div class="top-bar-right">
-		    <ul class="menu">
-		      <li><input type="search" placeholder="Search Product"></li>
-		      <li><button type="button" class="button">Search</button></li>
-		    </ul>
-		  </div>
-		</div>
-
-		<div class="column row">
-		  Welcome to Web Products
-		</div>
-
-		<div class="product-table">
-			<div class="row small-up-2 medium-up-3">
-			  <div class="column">
-			    <div class="card">
-			      <img src="assets/img/orbit/01.jpg">
-			      <div class="card-section">
-			        <h4>Name</h4>
-			        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-			        <p>Precio: 1000</p>
-			      </div>
-			      <div class="card-section">
-			      	<span class="label primary">Primary Label</span>
-			      	<span></span>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="column">
-			    <div class="card">
-			      <img src="assets/img/generic/rectangle-1.jpg">
-			      <div class="card-section">
-			        <h4>This is a card.</h4>
-			        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="column">
-			    <div class="card">
-			      <img src="assets/img/generic/rectangle-1.jpg">
-			      <div class="card-section">
-			        <h4>This is a card.</h4>
-			        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-			      </div>
-			    </div>
-			  </div>
-			</div>
-			<div class="row">
-			  <div class="medium-4 columns">
-			    <div class="card">
-			      <img src="assets/img/generic/rectangle-1.jpg">
-			      <div class="card-section">
-			        <h4>This is a card.</h4>
-			        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="medium-4 columns">
-			    <div class="card">
-			      <img src="assets/img/generic/rectangle-1.jpg">
-			      <div class="card-section">
-			        <h4>This is a card.</h4>
-			        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="medium-4 columns">
-			    <div class="card">
-			      <img src="assets/img/generic/rectangle-1.jpg">
-			      <div class="card-section">
-			        <h4>This is a card.</h4>
-			        <p>It has an easy to override visual style, and is appropriately subdued.</p>
-			      </div>
-			    </div>
-			  </div>
-			</div>
-		</div>
-
-	  </div>
-
-	<script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/activate.js"></script>
+</body>
 </html>

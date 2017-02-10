@@ -1,6 +1,13 @@
-.product-table{
-	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
+#logo{
+	padding-left: 15px;
+}
+
+.category-menu{
 	padding-top: 5%;
+	padding-left: 4%;
+	height: 40%;
+}
+
+.category-image{
+	width: 250px;
 }

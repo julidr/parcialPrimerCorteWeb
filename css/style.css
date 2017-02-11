@@ -8,6 +8,55 @@
 	height: 40%;
 }
 
-.category-image{
+#category-image{
 	width: 250px;
+	height: 200px;
+}
+#category-image:hover{
+	width: 240px;
+	height: 190px;
+}
+.products{
+	width: 100%;
+	padding-top: 5%;
+}
+
+#left-section{
+	margin-top: 5%;
+}
+
+#page{
+	float: right;
+}
+
+
+.card{
+	height: 450px;
+	width: 300px;
+}
+
+#product-image{
+	width: 200px;
+	height: 200px;
+    display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#product-price{
+	float: left;
+}
+
+#add-product{
+	float: right;
+	width: 40px;
+    height: 40px;
+}
+
+.btn-floating.btn-large i{
+	line-height: 40px;
+}
+
+.chip{
+	color: black;
 }

@@ -11,9 +11,7 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-
 	<title>Web Products</title>
-
 </head>
 <body>
 	<div class="header">
@@ -32,24 +30,23 @@
 	</div>
 
 	<div class="category-menu">
-		<div class="row">
-			<div class="col s3 waves-effect waves-light" id="div-category-image">
+		<div class="row" id="category-menu">
+			<div class="col s3 waves-effect waves-light category-menu2" id="div-category-image">
 		        <!-- Promo Content 1 goes here -->
-		        <img src="images/food.png" id="category-image" alt="Food">
+		        <img src="images/food.png" class="responsive-img category-image" alt="Food">
 	        </div>
-	      	<div class="col s3 waves-effect waves-light" id="div-category-image">
+	      	<div class="col s3 waves-effect waves-light category-menu2" id="div-category-image">
 		        <!-- Promo Content 2 goes here -->
-		        <img src="images/drink.png" id="category-image" alt="Drink">
+		        <img src="images/drink.png" class="responsive-img category-image" alt="Drink">
 	      	</div>
-	      	<div class="col s3 waves-effect waves-light" id="div-category-image">
+	      	<div class="col s3 waves-effect waves-light category-menu2" id="div-category-image">
 		        <!-- Promo Content 3 goes here -->
-		        <img src="images/lunch.png" id="category-image" alt="Lunch">
+		        <img src="images/lunch.png" class="responsive-img category-image" alt="Lunch">
 	      	</div>
-	      	<div class="col s3 waves-effect waves-light" id="div-category-image">
+	      	<div class="col s3 waves-effect waves-light category-menu2" id="div-category-image">
 		        <!-- Promo Content 3 goes here -->
-		        <img src="images/sea.png" id="category-image" alt="Sea">
+		        <img src="images/sea.png" class="responsive-img category-image" alt="Sea">
 	      	</div>
-			
 		</div>
 	</div>
 
@@ -112,134 +109,142 @@
 			  </div>
 	      </div>
 	      <div class="col s10" id="right-section">
-			  <nav>
-			    <div class="nav-wrapper amber accent-1">
-			      <form>
-			        <div class="input-field">
-			          <input id="search" type="search" required>
-			          <label class="label-icon" for="search"><i class="small material-icons">search</i></label>
-			          <i class="material-icons">close</i>
-			        </div>
-			      </form>
-			    </div>
-			  </nav>
+	      	<div class="right-section-header">
+	      		<div class="searchBar">
+	      		   <nav>
+				    <div class="nav-wrapper amber accent-1">
+				      <form>
+				        <div class="input-field">
+				          <input id="search" type="search" required>
+				          <label class="label-icon" for="search"><i class="small material-icons">search</i></label>
+				          <i class="material-icons">close</i>
+				        </div>
+				      </form>
+				    </div>
+				  </nav>
+	      		</div>
+	      		<div class="col m9 offset-m3 s12 mini-filter">
+		      		<!-- Dropdown Structure -->
+					<ul id="dropdown1" class="dropdown-content dropdown-filter">
+					  <li><a href="#!">&gt; $30.000</a></li>
+					  <li><a href="#!">&lt; $10.000</a></li>
+					  <li><a href="#!">Available</a></li>
+					  <li><a href="#!">No Available</a></li>
+					  <li><a href="#!">Best Sellers</a></li>
+					  <li><a href="#!">Food</a></li>
+					  <li><a href="#!">Drinks</a></li>
+					  <li><a href="#!">Lunch</a></li>
+					  <li><a href="#!">Sea</a></li>
+					</ul>
+	      			 <span class="dropdown-button span-filter" href="#!" data-activates="dropdown1">Filter<i class="material-icons right">arrow_drop_down</i></span>
+	      		</div>
+	      	</div>
 
-			  <div class="products">
-			  	<div class="row">
-			        <div class="col s4">
-			          <div class="card">
-			            <div class="card-image">
-			              <img src="images/lionStevenColor.png" id="product-image">
-			              <span class="card-title">Card Title</span>
-			            </div>
-			            <div class="card-content">
-			              <p>I am a very simple card. I am good at containing small bits of information.
-			              I am convenient because I require little markup to use effectively.</p>
-			                <div class="chip">
-							    <img src="images/food.png" alt="food">
-							    Food
-							 </div>
-							<div class="chip">
-							    <img src="images/drink.png" alt="drink">
-							    Drink
-							</div>
-			            </div>
-			            <div class="card-action">
-			                <p id="product-price"><b>Price:</b> $3000</p>
-							<a class="btn-floating btn-large waves-effect waves-light amber accent-2" id="add-product"><i class="material-icons">add</i></a>
-			            </div>
+			  <div class="products container">
+			  	<ul class="row products-list">
+			  		<li class="product-item col s4 m3">
+			  			<div class="card">
+				            <div class="card-image">
+				              <img src="images/lionStevenColor.png" class="responsive-img">
+				              <span class="card-title">Card Title</span>
+				            </div>
+				            <div class="card-content">
+				              <p>I am a very simple card. I am good at containing small bits of information.
+				              I am convenient because I require little markup to use effectively.</p>
+				                <div class="chip">
+								    <img src="images/food.png" alt="food">
+								    Food
+								 </div>
+								<div class="chip">
+								    <img src="images/drink.png" alt="drink">
+								    Drink
+								</div>
+				            </div>
+				            <div class="card-action row">
+				                <p id="product-price"><b>Price:</b> $3000</p>
+								<a class="btn-floating btn-large waves-effect waves-light amber accent-2" id="add-product"><i class="material-icons">add</i></a>
+				            </div>
 			          </div>
-			        </div>
-			        <div class="col s4">
-			          <div class="card">
-			            <div class="card-image">
-			              <img src="images/lionStevenColor.png" id="product-image">
-			              <span class="card-title">Card Title</span>
-			            </div>
-			            <div class="card-content">
-			              <p>I am a very simple card. I am good at containing small bits of information.
-			              I am convenient because I require little markup to use effectively.</p>
-			            </div>
-			            <div class="card-action">
-			              <a href="#">This is a link</a>
-			            </div>
+			  		</li>
+			  		<li class="product-item col s4 m3">
+			  			<div class="card">
+				            <div class="card-image">
+				              <img src="images/lionStevenColor.png" class="responsive-img">
+				              <span class="card-title">Card Title</span>
+				            </div>
+				            <div class="card-content">
+				              <p>I am a very simple card. I am good at containing small bits of information.
+				              I am convenient because I require little markup to use effectively.</p>
+				                <div class="chip">
+								    <img src="images/food.png" alt="food">
+								    Food
+								 </div>
+								<div class="chip">
+								    <img src="images/drink.png" alt="drink">
+								    Drink
+								</div>
+				            </div>
+				            <div class="card-action row">
+				                <p id="product-price"><b>Price:</b> $3000</p>
+								<a class="btn-floating btn-large waves-effect waves-light amber accent-2" id="add-product"><i class="material-icons">add</i></a>
+				            </div>
 			          </div>
-			        </div>
-			        <div class="col s4">
-			          <div class="card">
-			            <div class="card-image">
-			              <img src="images/lionStevenColor.png" id="product-image">
-			              <span class="card-title">Card Title</span>
-			            </div>
-			            <div class="card-content">
-			              <p>I am a very simple card. I am good at containing small bits of information.
-			              I am convenient because I require little markup to use effectively.</p>
-			            </div>
-			            <div class="card-action">
-			              <a href="#">This is a link</a>
-			            </div>
+			  		</li>
+			  		<li class="product-item col s4 m3">
+			  			<div class="card">
+				            <div class="card-image">
+				              <img src="images/lionStevenColor.png" class="responsive-img">
+				              <span class="card-title">Card Title</span>
+				            </div>
+				            <div class="card-content">
+				              <p>I am a very simple card. I am good at containing small bits of information.
+				              I am convenient because I require little markup to use effectively.</p>
+				                <div class="chip">
+								    <img src="images/food.png" alt="food">
+								    Food
+								 </div>
+								<div class="chip">
+								    <img src="images/drink.png" alt="drink">
+								    Drink
+								</div>
+				            </div>
+				            <div class="card-action row">
+				                <p id="product-price"><b>Price:</b> $3000</p>
+								<a class="btn-floating btn-large waves-effect waves-light amber accent-2" id="add-product"><i class="material-icons">add</i></a>
+				            </div>
 			          </div>
-			        </div>
-		      </div>
-		      <div class="row">
-			        <div class="col s4">
-			          <div class="card">
-			            <div class="card-image">
-			              <img src="images/lionStevenColor.png" id="product-image">
-			              <span class="card-title">Card Title</span>
-			            </div>
-			            <div class="card-content">
-			              <p>I am a very simple card. I am good at containing small bits of information.
-			              I am convenient because I require little markup to use effectively.</p>
-			            </div>
-			            <div class="card-action">
-			              <a href="#">This is a link</a>
-			            </div>
+			  		</li>
+			  					  		<li class="product-item col s4 m3">
+			  			<div class="card">
+				            <div class="card-image">
+				              <img src="images/lionStevenColor.png" class="responsive-img">
+				              <span class="card-title">Card Title</span>
+				            </div>
+				            <div class="card-content">
+				              <p>I am a very simple card. I am good at containing small bits of information.
+				              I am convenient because I require little markup to use effectively.</p>
+				                <div class="chip">
+								    <img src="images/food.png" alt="food">
+								    Food
+								 </div>
+								<div class="chip">
+								    <img src="images/drink.png" alt="drink">
+								    Drink
+								</div>
+				            </div>
+				            <div class="card-action row">
+				                <p id="product-price"><b>Price:</b> $3000</p>
+								<a class="btn-floating btn-large waves-effect waves-light amber accent-2" id="add-product"><i class="material-icons">add</i></a>
+				            </div>
 			          </div>
-			        </div>
-			        <div class="col s4">
-			          <div class="card">
-			            <div class="card-image">
-			              <img src="images/lionStevenColor.png" id="product-image">
-			              <span class="card-title">Card Title</span>
-			            </div>
-			            <div class="card-content">
-			              <p>I am a very simple card. I am good at containing small bits of information.
-			              I am convenient because I require little markup to use effectively.</p>
-			            </div>
-			            <div class="card-action">
-			              <a href="#">This is a link</a>
-			            </div>
-			          </div>
-			        </div>
-			        <div class="col s4">
-			          <div class="card">
-			            <div class="card-image">
-			              <img src="images/dipperColor.png" id="product-image">
-			              <span class="card-title">Card Title</span>
-			            </div>
-			            <div class="card-content">
-			              <p>I am a very simple card. I am good at containing small bits of information.
-			              I am convenient because I require little markup to use effectively.</p>
-			            </div>
-			            <div class="card-action">
-			              <a href="#">This is a link</a>
-			            </div>
-			          </div>
-			        </div>
-		      </div>
-			  	
+			  		</li>
+
+			  	</ul>
+
 			  </div>
+
+
 			 <div id="page">
-			   <ul class="pagination ">
-			    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-			    <li class="active amber darken-2"><a href="#!">1</a></li>
-			    <li class="waves-effect"><a href="#!">2</a></li>
-			    <li class="waves-effect"><a href="#!">3</a></li>
-			    <li class="waves-effect"><a href="#!">4</a></li>
-			    <li class="waves-effect"><a href="#!">5</a></li>
-			    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-			  </ul>
 			</div>
 	      </div>
     	</div>
@@ -249,5 +254,9 @@
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/activate.js"></script>
+    <script type="text/javascript" src="js/responsive.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/materialize-pagination.js"></script>
+    <script type="text/javascript" src="js/pagination.js"></script>
 </body>
 </html>

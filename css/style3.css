@@ -88,3 +88,11 @@
 .center{
 	margin-left: 10%;
 }
+
+#mobile-left-section{
+	text-align: center;
+}
+
+.product-item-mobile{
+	display: inline;
+}

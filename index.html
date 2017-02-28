@@ -7,9 +7,10 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <!--My own style-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 
 	<title>Web Products</title>
 </head>
@@ -17,42 +18,160 @@
 	<div class="header">
 		<nav>
 		    <div class="nav-wrapper amber accent-2">
-		      <a href="#!" class="brand-logo" id="logo">Web Products</a>
+		      <a href="index.html" class="brand-logo" id="logo">Web Products</a>
 		      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 		      <ul class="right hide-on-med-and-down">
-		        <li><a href="sass.html"><i class="material-icons left">shopping_cart</i>Shopping Cart</a></li>
+		        <li><a href="#modal1" id="shopCar" class="modal-trigger"><i class="material-icons left">shopping_cart</i>Shopping Cart</a></li>
 		      </ul>
 		      <ul class="side-nav" id="mobile-demo">
-		         <li><a href="sass.html"><i class="material-icons left">shopping_cart</i>Shopping Cart</a></li>
+		         <li><a href="#modal1" id="shopCarMobile"><i class="material-icons left">shopping_cart</i>Shopping Cart</a></li>
 		      </ul>
 		    </div>
 	    </nav>
+	</div>
+
+	<div id="modal1" class="modal modal-fixed-footer">
+		<div class="modal-content" id="productsShopCar">
+			<h4>Your Products</h4>
+			<table class="responsive-table">
+				<thead>
+					<tr>
+						<th data-field="img">img</th>
+						<th data-field="id">Name</th>
+						<th data-field="price">Price</th>
+						<th data-field="description">Description</th>
+						<th data-field="available">Available</th>
+						<th data-field="bestSell">Best Seller</th>
+						<th data-field="category1">Category 1</th>
+						<th data-field="category2">Category 2</th>
+						<th data-field="delete">Delete</th>
+					</tr>
+				</thead>
+				<tbody id="tableContent">
+				</tbody>
+			</table>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-yellow btn-flat">Close</a>
+		</div>
 	</div>
 
 	<div class="category-menu">
 		<div class="row" id="category-menu">
 			<div class="col s3 waves-effect waves-light category-menu2" id="div-category-image">
 		        <!-- Promo Content 1 goes here -->
-		        <img src="images/food.png" class="responsive-img category-image" alt="Food">
+		        <img src="images/food.png" class="responsive-img category-image" alt="Food" value="3" onclick="getProductByCategory(3)">
 	        </div>
 	      	<div class="col s3 waves-effect waves-light category-menu2" id="div-category-image">
 		        <!-- Promo Content 2 goes here -->
-		        <img src="images/drink.png" class="responsive-img category-image" alt="Drink">
+		        <img src="images/drink.png" class="responsive-img category-image" alt="Drink" value="1" onclick="getProductByCategory(1)">
 	      	</div>
 	      	<div class="col s3 waves-effect waves-light category-menu2" id="div-category-image">
 		        <!-- Promo Content 3 goes here -->
-		        <img src="images/lunch.png" class="responsive-img category-image" alt="Lunch">
+		        <img src="images/lunch.png" class="responsive-img category-image" alt="Lunch" value="2" onclick="getProductByCategory(2)">
 	      	</div>
 	      	<div class="col s3 waves-effect waves-light category-menu2" id="div-category-image">
 		        <!-- Promo Content 3 goes here -->
-		        <img src="images/sea.png" class="responsive-img category-image" alt="Sea">
+		        <img src="images/sea.png" class="responsive-img category-image" alt="Sea" value="4" onclick="getProductByCategory(4)">
 	      	</div>
 		</div>
 	</div>
 
 	<div class="products-section">
+		<div class="row" id="mobile-left-section">
+			<div class="col s12">
+				<div class="section">
+				    <h6>Order</h6>
+				    	<select class="bowser-default" id="selectedM">
+				    		<option value="" disabled selected>Choose your Option</option>
+				    		<option value="1">Name</option>
+				    		<option value="2">High Price</option>
+				    		<option value="3">Low Price</option>
+				    	</select>
+			     </div>
+			</div>
+			<div class="col s12">
+				<div class=" row section">
+				    <h6>Prices</h6>
+				    <div class="col s6">
+				    	<p>
+					      <input type="checkbox" id="big30M" />
+					      <label for="big30M">&gt; $30.000</label>
+					    </p>
+				    </div>
+				    <div class="col s6">
+				    	<p>
+					      <input type="checkbox" id="less10M" />
+					      <label for="less10M">&lt; $10.000</label>
+					    </p>
+				    </div>
+				</div>
+			</div>
+			<div class="col s12">
+				<div class="row section">
+				    <h6>Availability</h6>
+				    <div class="col s4">
+				    	<p>
+						   <input type="checkbox" id="availableM" />
+						   <label for="availableM">Available</label>
+						</p>
+				    </div>
+				    <div class="col s4">
+				    	<p>
+						   <input type="checkbox" id="not-availableM" />
+						   <label for="not-availableM">No Available</label>
+						</p>
+				    </div>
+				    <div class="col s4">
+				    	<p>
+						    <input type="checkbox" id="BestSellM" />
+						    <label for="BestSellM">Best Sellers</label>
+						</p>
+				    </div>
+				  </div>
+			</div>
+			<div class="col s12">
+				<div class="row section">
+				    <h6>Categories</h6>
+				    <div class="col s3">
+				    	<p>
+						    <input type="checkbox" id="foodM" />
+						    <label for="foodM">Food</label>
+						</p>
+				    </div>
+				    <div class="col s3">
+						<p>
+						    <input type="checkbox" id="drinksM" />
+						    <label for="drinksM">Drinks</label>
+						</p>
+				    </div>
+				    <div class="col s3">
+				    	<p>
+						    <input type="checkbox" id="lunchM" />
+						    <label for="lunchM">Lunch</label>
+						</p>
+				    </div>
+				    <div class="col s3">
+				    	<p>
+						    <input type="checkbox" id="seaM" />
+						    <label for="seaM">Sea</label>
+						</p>
+				    </div>
+			     </div>
+			</div>
+		</div>
 		<div class="row">
 	      <div class="col s2" id="left-section">
+	      	<div class="divider"></div>
+				  <div class="section">
+				    <h6>Order</h6>
+				    	<select class="bowser-default" id="selected">
+				    		<option value="" disabled selected>Choose your Option</option>
+				    		<option value="1">Name</option>
+				    		<option value="2">High Price</option>
+				    		<option value="3">Low Price</option>
+				    	</select>
+			     </div>
 	      	  <div class="divider"></div>
 				  <div class="section">
 				    <h6>Prices</h6>
@@ -106,7 +225,7 @@
 						      <label for="sea">Sea</label>
 						    </p>
 						</form>
-			  </div>
+			     </div>
 	      </div>
 	      <div class="col s10" id="right-section">
 	      	<div class="right-section-header">
@@ -141,120 +260,41 @@
 	      	</div>
 
 			  <div class="products">
-			  	<ul class="row products-list">
-			  		<li class="product-item col s4 m3">
-			  			<div class="card">
-				            <div class="card-image">
-				              <img src="images/lionStevenColor.png" class="responsive-img">
-				              <span class="card-title">Card Title</span>
-				            </div>
-				            <div class="card-content">
-				              <p>I am a very simple card. I am good at containing small bits of information.
-				              I am convenient because I require little markup to use effectively.</p>
-				                <div class="chip">
-								    <img src="images/food.png" alt="food">
-								    Food
-								 </div>
-								<div class="chip">
-								    <img src="images/drink.png" alt="drink">
-								    Drink
-								</div>
-				            </div>
-				            <div class="card-action row">
-				                <p id="product-price"><b>Price:</b> $3000</p>
-								<a class="btn-floating btn-large waves-effect waves-light amber accent-2" id="add-product"><i class="material-icons">add</i></a>
-				            </div>
-			          </div>
-			  		</li>
-			  		<li class="product-item col s4 m3">
-			  			<div class="card">
-				            <div class="card-image">
-				              <img src="images/lionStevenColor.png" class="responsive-img">
-				              <span class="card-title">Card Title</span>
-				            </div>
-				            <div class="card-content">
-				              <p>I am a very simple card. I am good at containing small bits of information.
-				              I am convenient because I require little markup to use effectively.</p>
-				                <div class="chip">
-								    <img src="images/food.png" alt="food">
-								    Food
-								 </div>
-								<div class="chip">
-								    <img src="images/drink.png" alt="drink">
-								    Drink
-								</div>
-				            </div>
-				            <div class="card-action row">
-				                <p id="product-price"><b>Price:</b> $3000</p>
-								<a class="btn-floating btn-large waves-effect waves-light amber accent-2" id="add-product"><i class="material-icons">add</i></a>
-				            </div>
-			          </div>
-			  		</li>
-			  		<li class="product-item col s4 m3">
-			  			<div class="card">
-				            <div class="card-image">
-				              <img src="images/lionStevenColor.png" class="responsive-img">
-				              <span class="card-title">Card Title</span>
-				            </div>
-				            <div class="card-content">
-				              <p>I am a very simple card. I am good at containing small bits of information.
-				              I am convenient because I require little markup to use effectively.</p>
-				                <div class="chip">
-								    <img src="images/food.png" alt="food">
-								    Food
-								 </div>
-								<div class="chip">
-								    <img src="images/drink.png" alt="drink">
-								    Drink
-								</div>
-				            </div>
-				            <div class="card-action row">
-				                <p id="product-price"><b>Price:</b> $3000</p>
-								<a class="btn-floating btn-large waves-effect waves-light amber accent-2" id="add-product"><i class="material-icons">add</i></a>
-				            </div>
-			          </div>
-			  		</li>
-			  					  		<li class="product-item col s4 m3">
-			  			<div class="card">
-				            <div class="card-image">
-				              <img src="images/lionStevenColor.png" class="responsive-img">
-				              <span class="card-title">Card Title</span>
-				            </div>
-				            <div class="card-content">
-				              <p>I am a very simple card. I am good at containing small bits of information.
-				              I am convenient because I require little markup to use effectively.</p>
-				                <div class="chip">
-								    <img src="images/food.png" alt="food">
-								    Food
-								 </div>
-								<div class="chip">
-								    <img src="images/drink.png" alt="drink">
-								    Drink
-								</div>
-				            </div>
-				            <div class="card-action row">
-				                <p id="product-price"><b>Price:</b> $3000</p>
-								<a class="btn-floating btn-large waves-effect waves-light amber accent-2" id="add-product"><i class="material-icons">add</i></a>
-				            </div>
-			          </div>
-			  		</li>
+			  	<ul class="row products-list" id="products-list">
+
+			  		
 			  	</ul>
 
 			  </div>
 
-
-			 <div id="page">
-			</div>
 	      </div>
+	      	<div class="products" id="products-list-mobile">
+	      		<div class="searchBar">
+	      		   <nav>
+				    <div class="nav-wrapper amber accent-1">
+				      <form>
+				        <div class="input-field">
+				          <input id="search-mobile" type="search" required>
+				          <label class="label-icon" for="search"><i class="small material-icons">search</i></label>
+				          <i class="material-icons">close</i>
+				        </div>
+				      </form>
+				    </div>
+				  </nav>
+	      		</div>
+			  	<ul class="row products-list" id="products-list-horizontal">
+			  		
+			  	</ul>
+			</div>
     	</div>
 	</div>
 
 	<!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/activate.js"></script>
-    <script type="text/javascript" src="js/responsive.js"></script>
-    <script type="text/javascript" src="js/init.js"></script>
-    <script type="text/javascript" src="js/pagination.js"></script>
+    <script type="text/javascript" src="js/activate2.js"></script>
+    <script type="text/javascript" src="js/responsive3.js"></script>
+    <script type="text/javascript" src="js/init6.js"></script>
+    <script type="text/javascript" src="js/jsonReaderF4.js"></script>
 </body>
 </html>
